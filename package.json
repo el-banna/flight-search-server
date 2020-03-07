@@ -1,0 +1,11 @@
+{
+  "name": "flight-search-server",
+  "version": "1.0.0",
+  "description": "Express.js endpoint to support airport search for \"flight-search\" project",
+  "main": "index.js",
+  "author": "Mohammad Elbanna",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
