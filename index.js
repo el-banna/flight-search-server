@@ -1,7 +1,11 @@
-const express = require('express')
-const airports = Object.values(require('./airports.json'));
+const express = require('express');
+const countryCodeToName = require("./iso-countries");
+const airports = Object.values(require('./airports.json')).map(airport => {
+  airport.country = countryCodeToName[airport.country];
+  return airport;
+});
 const app = express()
-const port = 3000
+const port = 1337
 
 app.get('/airports', (req, res) => {
   const query = req.query.query;
