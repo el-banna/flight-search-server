@@ -12,6 +12,7 @@ app.get('/airports', (req, res) => {
   if (!query) return res.json([]);
 
   const pattern = new RegExp(query, 'i')
+  res.setHeader("Access-Control-Allow-Origin", "*");
   return res.json(airports.filter(airport =>
     pattern.test(airport.name) ||
     pattern.test(airport.city) ||
